@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html> 
+  <head>
+    <title>LE VARIABILI</title>
+    <style>
+
+        *{
+		margin: 0;
+		padding: 0;
+		}
+    body{ 
+        margin:2%;
+        background-color: #04AA6D;
+    }
+    h1{
+        text-align:center;
+        color: #033500;
+        padding-bottom:3%;
+    }
+    h2{
+        color: #033500;
+        padding-left:5%;
+        padding-top: 3%;
+    }
+    p{
+        padding-left:5%;
+        padding-right: 5%;
+        padding-top: 1%;
+    }
+    #esempio p{
+        margin-left: 15%;
+        margin-right: 20%;
+        margin-top: 2%;
+        background-color: #4c8c72;
+        color: white;
+        padding: 1%;
+        border-width: 15px;
+        border-style: solid;
+        border-color:#4c8c72 ;
+    }   
+    #menu {
+        position: fixed;
+        background-color: #475f94; 
+        color: white;
+        text-align: center;
+        z-index: 10;
+        background-clip: padding-box;
+        border: 2px solid black;
+        bottom: 2%; 
+        right:2%;
+        font-size: 110%;
+    }
+    #menu p:hover{
+    background-color:red;
+    line-height: 200%;
+    }
+    #menu a, a:hover, a:visited{
+        text-decoration: none;
+        color:inherit;
+    }
+    #bordo{
+        border-bottom: 2px solid black;
+    }
+    p{
+        font-size: 120%;
+    }
+    #menu p{
+
+        font-size: 120%;
+    }
+    #esempio h2{
+        margin-left: 30%;
+        text-align: left;
+        color: #033500;
+    }
+    </style>
+  </head>
+  <body>
+        <h1>LE VARIABILI</h1>
+        <p>Una variabile in C è uno spazio di memoria che contiene un valore. Una variabile ha un nome che viene usato nella programmazione per riferirsi a un certo particolare spazio di memoria. Sono dei “contenitori” definiti da un tipo e da un nome.
+            Vanno dichiarate all’inizio del programma, quindi deve essere detto al compilatore il tipo della variabile, ed infine va inizializzata, ovvero le deve essere assegnato un valore. </p>
+        <h2>Tipi di variabili</h2>
+        <p>Ad ogni variabile in C deve essere associato un tipo, quindi quando si dichiara una variabile bisogna specificare sempre di che tipo è. In C le variabili possono essere di 6 tipi base:<br>
+            int (numero intero)<br>
+            char (carattere)<br>
+            float (numero reale)<br>
+            double (numero reale lungo)<br>
+            long (numero intero lungo)<br>
+            short (numero intero corto)<br>
+        <h2>Dichiarare una variabile</h2>
+        <p>Per essere usata una variabile va prima dichiarata:<br>
+        La dichiarazione di una variabile è del tipo: “tipo nomevariabile;” dove “nomevariabile” è il nome della variabile e “tipo” e il tipo della variabile.</p>
+            </p>
+        
+        <div id="esempio">
+            <p>int numero;    /*per dichiarare un numero intero.*/:<br>              
+            </p>
+        </div>
+        <p>Si possono anche dichiarare più variabili su una singola riga.</p>
+        <div id="esempio">
+            <p>int a,b;</p>
+        </div>
+        <p>Le variabili si possono inizializzare anche durante la dichiarazione.</p>
+        <div id="esempio">
+            <p>int a = 1;</p>
+        </div>
+        <p>Finché la variabile non è inizializzata il suo valore è indeterminato ed essendo che non tutti i compilatori agiscono nello stesso modo, è sempre meglio inizializzare le variabili prima dell’uso, in modo tale da rendere il programma compatibili con il maggior numero possibile di compilatori.</p>
+        <div id="esempio">
+            <p>int a, b = 1;    /*si creano due variabili, ma solo la seconda è inizializzata*/<br>
+                int a,b,c = 1;    /*tutte le variabili vengono inizializzate con lo stesso valore*/
+                </p>
+        </div>
+        <h2>Nomi delle variabili</h2>
+        <p>Il nome di una variabile viene scelto dal programmatore, e tecnicamente si chiama "identificatore". La scelta di un particolare nome non ha influenza sull'esecuzione del programma, tuttavia, vanno rispettate delle regole:<br>
+            -Due variabili non possono avere lo stesso nome<br>
+            -Si possono usare sia le lettere che i numeri, ma il primo carattere deve essere una lettera<br>
+            -Il C è case sensitive, quindi le maiuscole sono distinte dalle minuscole<br>
+            -Le parole riservate come if, int, etc… non possono essere usate per i nomi delle variabili.
+        </p>
+        <div id="esempio">
+            <h2>ESEMPIO COMPLETO</h2>
+            <p>#include <stdio.h>
+                int main<br>
+                {<br>
+                  int n = 45; <br><br>
+                
+                  float N_decimale = 54.78;<br>
+                  double N_decimale_con_più_spazi_di_memoria = 34.567;<br>
+                  char carattere = 'a';<br><br>
+                
+                  printf("La variabile intera è uguale a %d", n);<br><br>
+                
+                /*Si può cambiare il valore della variabile anche dopo averla dichiarata*/<br><br>
+                
+                  n = 16;<br>
+                  N_decimale= 33.9;<br>
+                  N_decimale_con_più_spazi_di_memoria= 5679.468;<br>
+                  carattere = 'b';<br>
+                }
+                </p>
+        </div>
+        <div id="menu">
+            <a href="Progetto Home Page.html"><p id="bordo">Torna al menu</p> </a>
+            <a href="Operatori.html"> <p>Argomento successivo</p></a>
+        </div>
+    </body>
+</html>
